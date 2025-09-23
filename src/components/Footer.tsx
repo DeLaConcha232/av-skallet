@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/DeLaConcha232', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/DeLaConcha232l', label: 'GitHub' },
     { icon: Linkedin, href: 'www.linkedin.com/in/diego-díaz-de-la-concha-193488271', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:avskallet@gmail.com', label: 'Email' }
   ];
