@@ -6,15 +6,15 @@ import { useApp } from '@/contexts/AppContext';
 const translations = {
   es: {
     greeting: 'Hola, soy',
-    title: 'Transformando ideas en realidades',
-    subtitle: 'Soluciones elegantes, escalables y centradas en el usuario. Transformo ideas complejas en código limpio y eficiente.',
+    title: 'Desarrollo software que no solo funciona, sino que impulsa tu negocio',
+    subtitle: 'Soluciones elegantes, escalables y con clase. No es solo tecnologia, es una forma de cambiar tu vida.',
     cta1: 'Ver Proyectos',
     cta2: 'Contáctame'
   },
   en: {
     greeting: 'Hi, I\'m',
-    title: 'Turning ideas into reality',
-    subtitle: 'Elegant, scalable, user-centered solutions. I transform complex ideas into clean and efficient code.',
+    title: 'I develop software that doesn\'t just work, it drives your business',
+    subtitle: 'Elegant, scalable and classy solutions. It’s not just technology, it’s a way to change your life.',
     cta1: 'View Projects', 
     cta2: 'Contact Me'
   }
