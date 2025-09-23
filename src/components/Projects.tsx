@@ -25,7 +25,7 @@ const translations = {
         description: 'Consultoría LandingPage que combina el desarrollo de soluciones tecnológicas personalizadas con una misión educativa.',
         image: '/project-consulting.webp', 
         technologies: ['Astro', 'Tailwind'],
-        liveUrl: '#',
+        liveUrl: 'https://startconsulting.surge.sh/',
         codeUrl: '#'
       },
       {
@@ -33,7 +33,7 @@ const translations = {
         description: 'Web App diseñada para ayudar a los usuarios a calcular su ingesta diaria de calorías y distribución de macronutrientes basada en métricas personales como edad, peso, altura y nivel de actividad física. Ya sea que su objetivo es perder, mantener o ganar peso, esta herramienta proporciona un enfoque personalizado para administrar sus necesidades nutricionales.',
         image: '/project-bodycalculator.webp',
         technologies: ['JS', 'CSS Modules', 'Vite', 'PWA'],
-        liveUrl: '#',
+        liveUrl: 'https://bodycalculator.surge.sh/',
         codeUrl: '#'
       },
       {
@@ -73,7 +73,7 @@ const translations = {
         description: 'LandingPage consultancy that combines the development of custom technology solutions with an educational mission.',
         image: '/project-consulting.webp',
         technologies: ['Astro', 'Tailwind'],
-        liveUrl: '#',
+        liveUrl: 'https://startconsulting.surge.sh/',
         codeUrl: '#'
       },
       {
@@ -81,7 +81,7 @@ const translations = {
         description: 'Web App designed to help users calculate their daily caloric intake and macronutrient distribution based on personal metrics such as age, weight, height, and physical activity level. Whether you aim to lose, maintain, or gain weight, this tool provides a personalized approach to managing your nutritional needs.',
         image: '/project-bodycalculator.webp',
         technologies: ['JS', 'CSS Modules', 'Vite', 'PWA'],
-        liveUrl: '#',
+        liveUrl: 'https://bodycalculator.surge.sh/',
         codeUrl: '#'
       },
       {
@@ -89,7 +89,7 @@ const translations = {
         description: 'Its a custom software for a contability company to improve execution times of some activities with the implementation with documents of Excel',
         image: '/project-sheetform.webp',
         technologies: ['Node.js', 'React', 'Vite', 'CSS Modules', 'Express', 'SQLite'],
-        liveUrl: '#',
+        liveUrl: '',
         codeUrl: '#'
       },
       {
