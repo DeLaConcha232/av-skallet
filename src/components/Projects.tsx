@@ -1,7 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useApp } from '@/contexts/AppContext';
 
@@ -30,7 +28,7 @@ const translations = {
       },
       {
         title: 'Body Calculator - Web App',
-        description: 'Web App diseñada para ayudar a los usuarios a calcular su ingesta diaria de calorías y distribución de macronutrientes basada en métricas personales como edad, peso, altura y nivel de actividad física. Ya sea que su objetivo es perder, mantener o ganar peso, esta herramienta proporciona un enfoque personalizado para administrar sus necesidades nutricionales.',
+        description: 'Web App diseñada para ayudar a los usuarios a calcular su ingesta diaria de calorías y distribución de macronutrientes basada en métricas personales como edad, peso, altura y nivel de actividad física.',
         image: '/project-bodycalculator.webp',
         technologies: ['JS', 'CSS Modules', 'Vite', 'PWA'],
         liveUrl: 'https://bodycalculator.surge.sh/',
@@ -40,23 +38,23 @@ const translations = {
         title: 'Sheet From Form - Automatización',
         description: 'Sistema de automatización que conecta formularios web con hojas de cálculo en tiempo real.',
         image: '/project-sheetform.webp',
-        technologies: ['Node.js', 'React', 'Vite', 'CSS Modules', 'Express', 'SQLite'],
+        technologies: ['Node.js', 'React', 'Vite', 'Express', 'SQLite'],
         liveUrl: '#',
         codeUrl: '#'
       },
       {
         title: 'Zetio - App Deportiva',
-        description: 'Web App Tournament Platform es una aplicación web progresiva diseñada para ayudar a los clubes deportivos a gestionar sus torneos, estadísticas y jugadores, proporcionando tanto interfaces de administración como de usuario.',
+        description: 'Web App Tournament Platform es una aplicación web progresiva diseñada para ayudar a los clubes deportivos a gestionar sus torneos, estadísticas y jugadores.',
         image: '/project-zetio.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA', 'Webhook', 'Stripe'],
+        technologies: ['React', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
         liveUrl: '#',
         codeUrl: '#'
       },
       {
         title: 'Orpheon - Sistema de Lealtad',
-        description: 'Sistema de lealtad diseñado para ayudar a la empresa a gestionar sus programas de fidelización de clientes, proporcionando tanto interfaces de administración como de usuario.',
+        description: 'Sistema de lealtad diseñado para ayudar a la empresa a gestionar sus programas de fidelización de clientes.',
         image: '/Sistemas-de-lealtad-Responsive.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
+        technologies: ['React', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
         liveUrl: '#',
         codeUrl: '#'
       },
@@ -64,7 +62,7 @@ const translations = {
         title: 'Portafolio Personal - Web',
         description: 'Portafolio personal que muestra tus proyectos y habilidades como desarrollador.',
         image: '/portafolio.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
+        technologies: ['React', 'Vite', 'Tailwind', 'PWA'],
         liveUrl: '#',
         codeUrl: '#'
       },
@@ -72,7 +70,7 @@ const translations = {
         title: 'Dashboard Admin - Web',
         description: 'Dashboard de administración que muestra métricas y estadísticas clave para la gestión de proyectos.',
         image: '/Dashboard.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
+        technologies: ['React', 'Vite', 'Tailwind', 'Supabase'],
         liveUrl: '#',
         codeUrl: '#'
       },
@@ -80,7 +78,7 @@ const translations = {
         title: 'Sistema de Tickets - Web',
         description: 'Sistema de gestión de tickets para soporte al cliente, permitiendo la creación, seguimiento y resolución de incidencias.',
         image: '/SistemaTickets.png',
-        technologies: ['React', 'Vite', 'Tailwind', 'SQLite', 'Shadcn UI'],
+        technologies: ['React', 'Vite', 'Tailwind', 'SQLite'],
         liveUrl: '#',
         codeUrl: '#'
       }
@@ -110,7 +108,7 @@ const translations = {
       },
       {
         title: 'Body Calculator - Web App',
-        description: 'Web App designed to help users calculate their daily caloric intake and macronutrient distribution based on personal metrics such as age, weight, height, and physical activity level. Whether you aim to lose, maintain, or gain weight, this tool provides a personalized approach to managing your nutritional needs.',
+        description: 'Web App designed to help users calculate their daily caloric intake and macronutrient distribution based on personal metrics such as age, weight, height, and physical activity level.',
         image: '/project-bodycalculator.webp',
         technologies: ['JS', 'CSS Modules', 'Vite', 'PWA'],
         liveUrl: 'https://bodycalculator.surge.sh/',
@@ -118,26 +116,25 @@ const translations = {
       },
       {
         title: 'Sheet From Form - Automation',
-        description: 'Its a custom software for a contability company to improve execution times of some activities with the implementation with documents of Excel',
+        description: 'Automation system that connects web forms with spreadsheets in real time.',
         image: '/project-sheetform.webp',
-        technologies: ['Node.js', 'React', 'Vite', 'CSS Modules', 'Express', 'SQLite'],
+        technologies: ['Node.js', 'React', 'Vite', 'Express', 'SQLite'],
         liveUrl: '',
         codeUrl: '#'
       },
       {
         title: 'Zetio - Sports App',
-        description: 'Web App Tournament Platform is a progressive web application designed to help sports clubs manage their tournaments, statistics, and players, providing both admin and user interfaces',
+        description: 'Web App Tournament Platform is a progressive web application designed to help sports clubs manage their tournaments, statistics, and players.',
         image: '/project-zetio.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA', 'Webhook', 'Stripe'],
+        technologies: ['React', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
         liveUrl: '#',
         codeUrl: '#'
-      }
-      ,
+      },
       {
         title: 'Orpheon - Loyalty System',
-        description: 'A loyalty system designed to help companies manage their customer loyalty programs, providing both admin and user interfaces.',
+        description: 'A loyalty system designed to help companies manage their customer loyalty programs.',
         image: '/Sistemas-de-lealtad-Responsive.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
+        technologies: ['React', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
         liveUrl: '#',
         codeUrl: '#'
       },
@@ -145,7 +142,7 @@ const translations = {
         title: 'Personal Portfolio - Web',
         description: 'Personal portfolio showcasing projects and developer skills.',
         image: '/portafolio.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
+        technologies: ['React', 'Vite', 'Tailwind', 'PWA'],
         liveUrl: '#',
         codeUrl: '#'
       },
@@ -153,7 +150,7 @@ const translations = {
         title: 'Admin Dashboard - Web',
         description: 'Admin dashboard that displays key metrics and statistics for project management.',
         image: '/Dashboard.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase', 'PostgreSQL', 'PWA'],
+        technologies: ['React', 'Vite', 'Tailwind', 'Supabase'],
         liveUrl: '#',
         codeUrl: '#'
       },
@@ -161,7 +158,7 @@ const translations = {
         title: 'Tickets system - Web',
         description: 'Ticket management system for customer support, allowing the creation, tracking, and resolution of issues.',
         image: '/SistemaTickets.png',
-        technologies: ['React', 'Vite', 'Tailwind', 'SQLite', 'Shadcn UI'],
+        technologies: ['React', 'Vite', 'Tailwind', 'SQLite'],
         liveUrl: '#',
         codeUrl: '#'
       }
@@ -174,56 +171,82 @@ export const Projects: React.FC = () => {
   const t = translations[language];
 
   return (
-    <section id="projects" className="section-padding">
-      <div className="section-container">
+    <section id="projects" className="relative section-padding overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute inset-0 gradient-mesh opacity-20" />
+
+      <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.title}</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">{t.title}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t.subtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {t.projects.map((project, index) => (
-            <Card 
+            <div 
               key={index}
-              className="overflow-hidden hover-lift hover-glow group animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group glass-card rounded-xl overflow-hidden hover-lift animate-slide-up"
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="relative overflow-hidden">
+              {/* Image */}
+              <div className="relative overflow-hidden h-48">
                 <img 
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent opacity-60" />
+                
+                {/* Hover overlay with link */}
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  {project.liveUrl && project.liveUrl !== '#' && (
+                    <a 
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium flex items-center gap-2 hover:bg-primary-hover transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      {t.viewProject}
+                    </a>
+                  )}
+                </div>
               </div>
               
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.slice(0, 4).map((tech) => (
+                    <Badge 
+                      key={tech} 
+                      variant="secondary" 
+                      className="text-xs bg-secondary/50 text-muted-foreground border border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 transition-colors"
+                    >
                       {tech}
                     </Badge>
                   ))}
+                  {project.technologies.length > 4 && (
+                    <Badge 
+                      variant="secondary" 
+                      className="text-xs bg-secondary/50 text-muted-foreground border border-border/50"
+                    >
+                      +{project.technologies.length - 4}
+                    </Badge>
+                  )}
                 </div>
-                
-                <div className="flex gap-3">
-                  {/* <Button size="sm" className="flex-1">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    {t.viewProject}
-                  </Button> */}
-                  {/* <Button variant="outline" size="sm">
-                    <Github className="w-4 h-4" />
-                  </Button> */}
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

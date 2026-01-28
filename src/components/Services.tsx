@@ -1,58 +1,50 @@
 import React from 'react';
-import { Code, Smartphone, Globe, Zap } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Code, Globe, Zap, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { useApp } from '@/contexts/AppContext';
 
 const translations = {
   es: {
-    title: 'Servicios',
-    subtitle: 'Soluciones tecnológicas a medida para hacer crecer tu negocio',
+    title: 'Nuestros servicios',
+    subtitle: 'Atendemos necesidades tecnológicas con soluciones robustas y escalables. Siempre adaptadas a tu realidad de negocio.',
+    learnMore: 'Saber más',
     services: [
       {
         icon: Code,
-        title: 'Desarrollo Web',
-        description: 'Aplicaciones web modernas, responsivas, rápidas y escalables usando las últimas tecnologías.'
+        title: 'Desarrollo a medida',
+        description: 'Información para tu crecimiento de procesos.'
       },
       {
-        icon: Smartphone, 
-        title: 'Aplicaciones Web Pogresivas (PWA)',
-        description: 'Apps nativas y cross-platform que ofrecen experiencias excepcionales.'
-      },
-      {
-        icon: Globe,
-        title: 'Consultoría Tecnológica',
-        description: 'Asesoramiento estratégico para optimizar procesos y adoptar nuevas tecnologías.'
+        icon: Globe, 
+        title: 'Consultoría tecnológica',
+        description: 'Obtengo y consultados, amplios en O4 y empresas.'
       },
       {
         icon: Zap,
-        title: 'Automatización',
-        description: 'Automatización de procesos para aumentar eficiencia y reducir costos operativos.'
+        title: 'Optimización de procesos',
+        description: 'Mantenimiento semi procesos y de tus equipos.'
       }
     ]
   },
   en: {
-    title: 'Services',
-    subtitle: 'Custom technology solutions to grow your business',
+    title: 'Our services',
+    subtitle: 'We address technology needs with robust and scalable solutions. Always adapted to your business reality.',
+    learnMore: 'Learn more',
     services: [
       {
         icon: Code,
-        title: 'Web Development', 
-        description: 'Modern, responsive, fast and scalable web applications using the latest technologies.'
-      },
-      {
-        icon: Smartphone,
-        title: 'Progressive web applications (PWA)',
-        description: 'Native and cross-platform apps that deliver exceptional experiences.'
+        title: 'Custom Development', 
+        description: 'Information for your process growth.'
       },
       {
         icon: Globe,
         title: 'Technology Consulting',
-        description: 'Strategic advisory to optimize processes and adopt new technologies.'
+        description: 'Comprehensive consulting for organizations and businesses.'
       },
       {
         icon: Zap,
-        title: 'Automation',
-        description: 'Process automation to increase efficiency and reduce operational costs.'
+        title: 'Process Optimization',
+        description: 'Process maintenance and equipment optimization.'
       }
     ]
   }
@@ -62,41 +54,61 @@ export const Services: React.FC = () => {
   const { language } = useApp();
   const t = translations[language];
 
+  const scrollToContact = () => {
+    const element = document.querySelector("#contact");
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section id="services" className="section-padding bg-muted/30">
-      <div className="section-container">
+    <section id="services" className="relative section-padding overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 gradient-hero opacity-50" />
+      <div className="absolute inset-0 gradient-mesh opacity-30" />
+
+      <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.title}</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">{t.title}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t.subtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {t.services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card 
+              <div 
                 key={index}
-                className="h-full hover-lift hover-glow border-0 gradient-card animate-slide-up"
+                className="group service-card hover-lift animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-8 text-center h-full flex flex-col">
-                  <div className="mb-6 flex-shrink-0">
-                    <div className="w-16 h-16 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center">
-                      <IconComponent className="h-8 w-8 text-primary" />
-                    </div>
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <IconComponent className="h-7 w-7 text-primary" />
                   </div>
-                  
-                  <h3 className="text-xl font-semibold mb-4 flex-shrink-0">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground leading-relaxed flex-grow">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
+                </div>
+                
+                {/* Content */}
+                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                  {service.title}
+                </h3>
+                
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {service.description}
+                </p>
+
+                {/* CTA Button */}
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={scrollToContact}
+                  className="border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 group/btn"
+                >
+                  {t.learnMore}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                </Button>
+              </div>
             );
           })}
         </div>

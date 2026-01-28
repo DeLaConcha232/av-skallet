@@ -21,11 +21,13 @@ const translations = {
       sending: 'Enviando...'
     },
     info: [
-    { icon: Mail, label: 'Email', value: 'avskallet@gmail.com' },
+      { icon: Mail, label: 'Email', value: 'avskallet@gmail.com' },
       { icon: Phone, label: 'Teléfono', value: '449-143-1962' },
       { icon: MapPin, label: 'Ubicación', value: 'Mexico' }
     ],
-    success: 'Mensaje enviado correctamente. Te contactaré pronto!'
+    success: 'Mensaje enviado correctamente. Te contactaré pronto!',
+    guarantee: 'Respuesta Garantizada',
+    guaranteeText: 'Te responderé en menos de 24 horas con una propuesta personalizada.'
   },
   en: {
     title: 'Contact',
@@ -43,7 +45,9 @@ const translations = {
       { icon: Phone, label: 'Phone', value: '449-143-1962' },
       { icon: MapPin, label: 'Location', value: 'Mexico' }
     ],
-    success: 'Message sent successfully. I\'ll contact you soon!'
+    success: 'Message sent successfully. I\'ll contact you soon!',
+    guarantee: 'Guaranteed Response',
+    guaranteeText: 'I\'ll respond within 24 hours with a personalized proposal.'
   }
 };
 
@@ -71,17 +75,14 @@ export const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Create mailto link with form data
     const mailtoLink = `mailto:avskallet@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
       `Nombre: ${formData.name}\n` +
       `Email: ${formData.email}\n\n` +
       `Mensaje:\n${formData.message}`
     )}`;
     
-    // Open email client
     window.location.href = mailtoLink;
     
-    // Show success message
     setTimeout(() => {
       toast({
         title: t.success,
@@ -100,10 +101,14 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="section-padding">
-      <div className="section-container">
+    <section id="contact" className="relative section-padding overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute inset-0 gradient-mesh opacity-20" />
+
+      <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.title}</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">{t.title}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t.subtitle}
           </p>
@@ -121,8 +126,8 @@ export const Contact: React.FC = () => {
                     key={index}
                     className="flex items-center space-x-4 group"
                   >
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <IconComponent className="h-6 w-6 text-primary" />
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/40 transition-all">
+                      <IconComponent className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <div className="font-medium text-foreground">{item.label}</div>
@@ -133,25 +138,27 @@ export const Contact: React.FC = () => {
               })}
             </div>
 
-            {/* Decorative Card */}
-            <Card className="mt-12 gradient-card border-0">
+            {/* Guarantee Card */}
+            <Card className="mt-12 glass-card border-border/50">
               <CardContent className="p-8 text-center">
-                <CheckCircle className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Respuesta Garantizada</h3>
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+                  <CheckCircle className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">{t.guarantee}</h3>
                 <p className="text-muted-foreground">
-                  Te responderé en menos de 24 horas con una propuesta personalizada.
+                  {t.guaranteeText}
                 </p>
               </CardContent>
             </Card>
           </div>
 
           {/* Contact Form */}
-          <Card className="animate-slide-up hover-glow" style={{ animationDelay: '0.2s' }}>
+          <Card className="glass-card border-border/50 animate-slide-up hover-glow" style={{ animationDelay: '0.2s' }}>
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name">{t.form.name}</Label>
+                    <Label htmlFor="name" className="text-foreground">{t.form.name}</Label>
                     <Input
                       id="name"
                       name="name"
@@ -159,11 +166,11 @@ export const Contact: React.FC = () => {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="mt-1"
+                      className="mt-1 bg-secondary/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email">{t.form.email}</Label>
+                    <Label htmlFor="email" className="text-foreground">{t.form.email}</Label>
                     <Input
                       id="email"
                       name="email"
@@ -171,13 +178,13 @@ export const Contact: React.FC = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="mt-1"
+                      className="mt-1 bg-secondary/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="subject">{t.form.subject}</Label>
+                  <Label htmlFor="subject" className="text-foreground">{t.form.subject}</Label>
                   <Input
                     id="subject"
                     name="subject"
@@ -185,12 +192,12 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="mt-1"
+                    className="mt-1 bg-secondary/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="message">{t.form.message}</Label>
+                  <Label htmlFor="message" className="text-foreground">{t.form.message}</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -198,19 +205,19 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="mt-1 resize-none"
+                    className="mt-1 resize-none bg-secondary/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                   />
                 </div>
 
                 <Button 
                   type="submit" 
                   size="lg"
-                  className="w-full hover-lift"
+                  className="w-full hover-lift bg-primary hover:bg-primary-hover text-primary-foreground"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-foreground mr-2"></div>
                       {t.form.sending}
                     </>
                   ) : (
