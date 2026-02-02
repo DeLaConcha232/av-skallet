@@ -61,10 +61,11 @@ export const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <button onClick={() => scrollToSection('#home')} className="flex items-center">
-              <span className="text-xl font-bold">
+              {/* <span className="text-xl font-bold">
                 <span className="text-primary italic">AV</span>
                 <span className="text-foreground">-skallet</span>
-              </span>
+              </span> */}
+              <img src="/Logotipo_Blanco.png" alt="Logo AV-skallet" className='w-32 h-auto'/>
             </button>
           </div>
 

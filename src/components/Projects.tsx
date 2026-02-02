@@ -67,14 +67,6 @@ const translations = {
         codeUrl: '#'
       },
       {
-        title: 'Dashboard Admin - Web',
-        description: 'Dashboard de administración que muestra métricas y estadísticas clave para la gestión de proyectos.',
-        image: '/Dashboard.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase'],
-        liveUrl: '#',
-        codeUrl: '#'
-      },
-      {
         title: 'Sistema de Tickets - Web',
         description: 'Sistema de gestión de tickets para soporte al cliente, permitiendo la creación, seguimiento y resolución de incidencias.',
         image: '/SistemaTickets.png',
@@ -143,14 +135,6 @@ const translations = {
         description: 'Personal portfolio showcasing projects and developer skills.',
         image: '/portafolio.webp',
         technologies: ['React', 'Vite', 'Tailwind', 'PWA'],
-        liveUrl: '#',
-        codeUrl: '#'
-      },
-      {
-        title: 'Admin Dashboard - Web',
-        description: 'Admin dashboard that displays key metrics and statistics for project management.',
-        image: '/Dashboard.webp',
-        technologies: ['React', 'Vite', 'Tailwind', 'Supabase'],
         liveUrl: '#',
         codeUrl: '#'
       },

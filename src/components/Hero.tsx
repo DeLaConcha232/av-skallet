@@ -165,34 +165,37 @@ export const Hero: React.FC = () => {
                 {/* Main card */}
                 <div className="relative w-full h-full glass-card rounded-3xl p-6 flex items-center justify-center">
                   <img 
-                    src="/logo-white.webp" 
+                    src="/Isotipo_Blanco.png" 
                     alt="AV-skallet Logo" 
                     className="w-48 h-auto object-contain opacity-90"
                   />
                 </div>
 
                 {/* Floating tech badges */}
-                <div className="absolute -top-4 -right-4 px-3 py-1.5 rounded-full glass-card text-xs font-medium text-primary border border-primary/30 animate-float">
-                  React
+                <div className="absolute top-3 -right-4 px-3 py-1.5 rounded-full glass-card text-xs font-medium text-primary border border-primary/30 animate-float">
+                  Apps moviles
                 </div>
-                <div className="absolute -bottom-4 -left-4 px-3 py-1.5 rounded-full glass-card text-xs font-medium text-accent-foreground border border-accent/30 animate-float-slow">
-                  Tailwind
+                <div className="absolute bottom-4 -left-4 px-3 py-1.5 rounded-full glass-card text-xs font-medium text-amethyst-400 border border-amethyst-400/30 animate-float-slow">
+                  Sistemas personalizados
                 </div>
-                <div className="absolute top-1/2 -right-8 px-3 py-1.5 rounded-full glass-card text-xs font-medium text-emerald-400 border border-emerald-500/30 animate-float-slower">
-                  Node.js
+                <div className="absolute top-60 -right-8 px-3 py-1.5 rounded-full glass-card text-xs font-medium text-emerald-400 border border-emerald-500/30 animate-float-slower">
+                  Paginas web 
                 </div>
+                {/* <div className="absolute -top-4 -left-4 px-3 py-1.5 rounded-full glass-card text-xs font-medium text-amethyst-400 border border-amethyst-400/30 animate-float-slow">
+                  Sistemas personalizados
+                </div> */}
               </div>
             </div>
           </div>
         </div>
 
         {/* Brand name at bottom right */}
-        <div className="absolute bottom-8 right-8 hidden lg:block">
+        {/* <div className="absolute bottom-8 right-8 hidden lg:block">
           <span className="text-3xl font-bold">
             <span className="text-primary italic">AV</span>
             <span className="text-foreground">-skallet</span>
           </span>
-        </div>
+        </div> */}
       </div>
 
       {/* Scroll Indicator */}
