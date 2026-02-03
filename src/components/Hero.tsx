@@ -7,16 +7,18 @@ const translations = {
   es: {
     greeting: "Hola, soy",
     title: "Desarrollamos software a la medida",
-    subtitle: "Soluciones estratégicas para organizaciones que buscan claridad técnica y escalabilidad.",
+    subtitle:
+      "Soluciones estratégicas para organizaciones que buscan claridad técnica y escalabilidad.",
     cta1: "Nuestros servicios",
-    cta2: "Contáctame",
+    cta2: "Contáctanos",
   },
   en: {
     greeting: "Hi, I'm",
     title: "We develop custom software",
-    subtitle: "Strategic solutions for organizations seeking technical clarity and scalability.",
+    subtitle:
+      "Strategic solutions for organizations seeking technical clarity and scalability.",
     cta1: "Our Services",
-    cta2: "Contact Me",
+    cta2: "Contact Us",
   },
 };
 
@@ -63,55 +65,18 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-b from-black/10 to-black/50 flex items-center overflow-hidden"
     >
-      {/* Background with mesh gradient */}
-      <div className="absolute inset-0 gradient-hero noise-overlay">
-        <div className="absolute inset-0 gradient-mesh" />
-      </div>
-
-      {/* Floating orbs for visual interest */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Emerald orb */}
-        <div 
-          className="absolute w-[500px] h-[500px] rounded-full animate-float-slow"
-          style={{
-            background: 'radial-gradient(circle, hsl(152 48% 30% / 0.15) 0%, transparent 70%)',
-            top: '10%',
-            right: '-10%',
-            filter: 'blur(40px)',
-          }}
-        />
-        {/* Amethyst orb */}
-        <div 
-          className="absolute w-[400px] h-[400px] rounded-full animate-float-slower"
-          style={{
-            background: 'radial-gradient(circle, hsl(268 28% 30% / 0.2) 0%, transparent 70%)',
-            bottom: '20%',
-            left: '-5%',
-            filter: 'blur(40px)',
-          }}
-        />
-        {/* Small accent orbs */}
-        <div 
-          className="absolute w-[200px] h-[200px] rounded-full animate-float"
-          style={{
-            background: 'radial-gradient(circle, hsl(152 48% 50% / 0.1) 0%, transparent 70%)',
-            top: '60%',
-            right: '20%',
-            filter: 'blur(30px)',
-          }}
-        />
-      </div>
-
       <div className="section-container section-padding w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="animate-fade-in">
             {/* Main Title with Typewriter */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl sm:text-5xl lg:text-6xl font-serif font-semibold md:mb-6 mb-2 md:leading-tight">
               <span className="text-foreground">{displayedText}</span>
-              {isTyping && <span className="animate-pulse text-primary">|</span>}
+              {isTyping && (
+                <span className="animate-pulse text-primary">|</span>
+              )}
             </h1>
 
             {/* Subtitle */}
@@ -127,46 +92,54 @@ export const Hero: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 animate-slide-up"
               style={{ animationDelay: "0.5s" }}
             >
-              <Button 
-                size="lg" 
-                onClick={scrollToServices} 
-                className="group hover-lift bg-primary hover:bg-primary-hover text-primary-foreground"
+              <Button
+                size="lg"
+                onClick={scrollToServices}
+                className="group font-display [&_svg]:size-5 hover-lift md:text-xl text-lg bg-primary hover:bg-primary-hover text-primary-foreground"
               >
                 {t.cta1}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight
+                  size={22}
+                  strokeWidth={3}
+                  className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
+                />
               </Button>
 
-              <Button 
-                variant="outline" 
-                size="lg" 
-                onClick={scrollToContact} 
-                className="hover-lift border-border/50 hover:bg-secondary/50 hover:border-primary/50"
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={scrollToContact}
+                className="hover-lift  font-display [&_svg]:size-5 md:text-xl text-lg border-border/50 hover:bg-secondary/50 hover:border-primary/50"
               >
-                <MessageCircle className="mr-2 h-5 w-5" />
+                <MessageCircle strokeWidth={3} className="mr-2  h-5 w-5" />
                 {t.cta2}
               </Button>
             </div>
           </div>
 
           {/* Right decorative element - Brand logo/visual */}
-          <div className="hidden lg:flex justify-center items-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <div
+            className="hidden lg:flex justify-center items-center animate-fade-in"
+            style={{ animationDelay: "0.4s" }}
+          >
             <div className="relative">
               {/* Main visual container */}
               <div className="relative w-80 h-80">
                 {/* Glow effect behind */}
-                <div 
+                <div
                   className="absolute inset-0 rounded-3xl animate-pulse-glow"
                   style={{
-                    background: 'radial-gradient(circle, hsl(152 48% 50% / 0.2) 0%, transparent 70%)',
-                    filter: 'blur(30px)',
+                    background:
+                      "radial-gradient(circle, hsl(152 48% 50% / 0.2) 0%, transparent 70%)",
+                    filter: "blur(30px)",
                   }}
                 />
-                
+
                 {/* Main card */}
                 <div className="relative w-full h-full glass-card rounded-3xl p-6 flex items-center justify-center">
-                  <img 
-                    src="/Isotipo_Blanco.png" 
-                    alt="AV-skallet Logo" 
+                  <img
+                    src="/Isotipo_Blanco.png"
+                    alt="AV-skallet Logo"
                     className="w-48 h-auto object-contain opacity-90"
                   />
                 </div>
@@ -179,7 +152,7 @@ export const Hero: React.FC = () => {
                   Sistemas personalizados
                 </div>
                 <div className="absolute top-60 -right-8 px-3 py-1.5 rounded-full glass-card text-xs font-medium text-emerald-400 border border-emerald-500/30 animate-float-slower">
-                  Paginas web 
+                  Paginas web
                 </div>
                 {/* <div className="absolute -top-4 -left-4 px-3 py-1.5 rounded-full glass-card text-xs font-medium text-amethyst-400 border border-amethyst-400/30 animate-float-slow">
                   Sistemas personalizados
@@ -199,7 +172,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 z-30 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex justify-center">
           <div className="w-1 h-2 bg-muted-foreground/50 rounded-full mt-2 animate-pulse"></div>
         </div>

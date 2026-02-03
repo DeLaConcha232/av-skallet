@@ -3,7 +3,12 @@ import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -125,15 +130,17 @@ export default {
         sm: "var(--radius-sm)",
       },
       fontFamily: {
-        'heading': 'var(--font-heading)',
-        'body': 'var(--font-body)',
+        sans: ["Lato", "sans-serif"],
+        display: ["varien", "sans-serif"],
+        serif: ["ov-cotin", "serif"],
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'hero-gradient': 'var(--gradient-hero)',
-        'card-gradient': 'var(--gradient-card)',
-        'mesh-gradient': 'var(--gradient-mesh)',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-gradient": "var(--gradient-hero)",
+        "card-gradient": "var(--gradient-card)",
+        "mesh-gradient": "var(--gradient-mesh)",
       },
       keyframes: {
         "accordion-down": {
@@ -144,7 +151,7 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "float": {
+        float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
         },
@@ -152,7 +159,7 @@ export default {
           "0%, 100%": { opacity: "0.4" },
           "50%": { opacity: "0.8" },
         },
-        "shimmer": {
+        shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
@@ -160,20 +167,23 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 6s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
         "float-slow": "float 8s ease-in-out infinite",
         "float-slower": "float 10s ease-in-out infinite",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
-        "shimmer": "shimmer 2s linear infinite",
+        shimmer: "shimmer 2s linear infinite",
       },
       boxShadow: {
-        'glow-sm': '0 0 15px -3px hsl(var(--primary) / 0.3)',
-        'glow-md': '0 0 25px -5px hsl(var(--primary) / 0.4)',
-        'glow-lg': '0 0 40px -8px hsl(var(--primary) / 0.5)',
-        'glow-emerald': '0 0 30px -5px hsl(var(--emerald-500) / 0.4)',
-        'glow-amethyst': '0 0 30px -5px hsl(var(--amethyst-500) / 0.4)',
+        "glow-sm": "0 0 15px -3px hsl(var(--primary) / 0.3)",
+        "glow-md": "0 0 25px -5px hsl(var(--primary) / 0.4)",
+        "glow-lg": "0 0 40px -8px hsl(var(--primary) / 0.5)",
+        "glow-emerald": "0 0 30px -5px hsl(var(--emerald-500) / 0.4)",
+        "glow-amethyst": "0 0 30px -5px hsl(var(--amethyst-500) / 0.4)",
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [
+    require("@designbycode/tailwindcss-text-stroke"),
+    tailwindcssAnimate,
+  ],
 } satisfies Config;
